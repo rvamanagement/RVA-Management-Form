@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Out Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <!-- RVA Management in top-left corner -->
+    <div class="logo-text">RVA Management</div>
+
+    <div class="form-container">
+        <!-- Step 1 -->
+        <div class="form-step" id="step-1">
+            <h1>What's your name?</h1>
+            <input type="text" id="name" placeholder="Enter your name">
+            <button class="next-button" onclick="nextStep(2)">Next</button>
+        </div>
+        <!-- Step 2 -->
+        <div class="form-step" id="step-2">
+            <h1>What's your Instagram name?</h1>
+            <input type="text" id="instagram" placeholder="@yourhandle">
+            <button class="next-button" onclick="nextStep(3)">Next</button>
+        </div>
+        <!-- Step 3 -->
+        <div class="form-step" id="step-3">
+            <h1>What's your email address?</h1>
+            <input type="email" id="email" placeholder="Enter your email">
+            <button class="next-button" onclick="submitForm()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle form navigation
+        function nextStep(step) {
+            const currentStep = document.querySelector('.form-step:not([style*="display: none"])');
+            currentStep.style.display = 'none';
+            document.getElementById(`step-${step}`).style.display = 'block';
+        }
+
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            const instagram = document.getElementById('instagram').value;
+            const email = document.getElementById('email').value;
+
+            // Log data for testing (you can replace this with actual form handling)
+            console.log({ name, instagram, email });
+
+            // Redirect to Thank You page
+            window.location.href = 'thankyou.html'; // Make sure this file is in the same directory
+        }
+
+        // Initial setup
+        document.querySelectorAll('.form-step').forEach((step) => (step.style.display = 'none'));
+        document.getElementById('step-1').style.display = 'block';
+    </script>
+</body>
+</html>
