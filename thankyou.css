@@ -1,0 +1,80 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffeef1;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* RVA Management in Top-Left */
+.logo-text {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 1rem;
+    font-weight: 600; /* Heavy weight for bold appearance */
+    color: #333; /* Plain black color */
+}
+
+/* Thank You Container */
+.form-container {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Thank You Heading */
+.form-container h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Thank You Message */
+.form-container p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Back to Home Button */
+.cta-button {
+    background-color: #ff4a57;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px; /* Fully rounded button */
+    font-size: 1rem;
+    font-weight: 500; /* Medium weight */
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #ff2a37;
+    transform: translateY(-2px);
+}
+
+.cta-button:active {
+    transform: translateY(1px);
+}
